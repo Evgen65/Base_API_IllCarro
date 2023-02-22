@@ -38,7 +38,7 @@ public class LoginTestsOkHttp {
     }
     @Test
     public void loginWrongEmailFormat() throws IOException {
-        AuthRequestDto auth = AuthRequestDto.builder().username("lps@gmail.com").password("Nnoa12345$").build();
+        AuthRequestDto auth = AuthRequestDto.builder().username("abcd@mail.com").password("Abcd1234$").build();
 
         RequestBody requestBody = RequestBody.create(gson.toJson(auth), JSON);
         Request request = new Request.Builder()

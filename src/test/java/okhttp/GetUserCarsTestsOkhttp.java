@@ -16,10 +16,10 @@ public class GetUserCarsTestsOkhttp {
     OkHttpClient client = new OkHttpClient();
     Gson gson = new Gson();
 
-    String token ="eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwic3ViIjoibm9hQGdtYWlsLmNvbSIsImlzcyI6IlJlZ3VsYWl0IiwiZXhwIjoxNjc1ODczMzUzLCJpYXQiOjE2NzUyNzMzNTN9.L-vtuPE8oupgboSXjUqXQv6nbmidsBLaf4obdrVXyaM";
+    String token ="eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwic3ViIjoiYWJjZEBtYWlsLmNvbSIsImlzcyI6IlJlZ3VsYWl0IiwiZXhwIjoxNjc2MjE2ODIxLCJpYXQiOjE2NzU2MTY4MjF9.sS21BSserjCrnnWXdelVzfBuPeOIF4pTbqtPMmefLk8";
+
     @Test
     public void successGetUserCars() throws IOException {
-
         Request request = new Request.Builder()
                 .url("https://ilcarro-backend.herokuapp.com/v1/cars/my")
                 .header("Authorization",token).build();
@@ -33,7 +33,5 @@ public class GetUserCarsTestsOkhttp {
             System.out.println(car.getSerialNumber());
             System.out.println("*****");
         }
-
-
     }
 }
